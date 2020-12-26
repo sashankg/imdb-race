@@ -1,13 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,900&display=swap');
+
+:root {
+    --blue: #3B3B98;
+    --yellow: #F8EFBA;
+    --red: #FD7272;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #2C3A47;
+  font-weight: 400;
+  font-style: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--red);
+    min-height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    padding: 12px;
+    flex: 1;
+}
+
+h1 {
+    font-size: 72px;
+    color: var(--blue);
+    text-align: center;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--blue);
+    text-align: center;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 24px;
+    text-align: center;
+    font-style: italic;
+    margin: 4px;
+}
+
+button {
+    padding: 4px 12px  4px 12px ;
+    border: 3px solid var(--yellow);
+    background-color: var(--red);
+    color:  var(--yellow);
+    border-radius: 8px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--yellow);
+    color:  var(--red);
+}
+
+button:focus {
+    outline: none;
+}
+
+table {
+    border: none;
+    margin: 12px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+tr {
+}
+
+th {
+    background-color: var(--yellow);
+    padding: 8px;
+}
+
+
+td {
+    padding: 4px;
+    text-align: center;
+}
+
+tr {
+    background-color: #F8EFBAb0;
+}
+
+.shaded {
+    background-color: #F8EFBA70;
+}
+
+input {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    border: none;
+    background-color: var(--red);
+    border-bottom: 3px solid var(--yellow);
+    padding: 4px;
+    margin-right: 4px;
+    color: var(--yellow);
+    min-width: 0px;
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus::placeholder {
+    opacity: 50%;
+}
+
+::placeholder {
+    color: var(--yellow);
+}
+
+.start-end {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.start-end input {
+    border-bottom-color: var(--red);
+    background-color: var(--yellow);
+    color: var(--red);
+}
+
+.start-end button {
+    background-color: var(--yellow);
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.start-end button:hover {
+    background-color: var(--red);
+    color: var(--yellow);
+}
+
+.actor-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    width: 250px;
+    background-color: var(--yellow);
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.search-input {
+    flex: 1;
+}
+
+.start-button {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 900;
+    border-width: 6px;
+    margin-top: 24px;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    height: 227px;
+    overflow: scroll;
+    background-color: white;
+    width: 100%;
+    margin: 4px;
+}
+
+.search-results-item {
+    padding: 4px;
+    cursor: pointer;
+}
+
+.search-results-item:hover {
+    padding: 4px;
+    background-color: lightgrey;
+}
+
+.actor-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.person-image {
+    background-color: grey;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 3px solid var(--red);
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.name input {
+    min-width: 300px;
+}
+
+.person {
+    background-color: var(--yellow);
+    padding: 12px;
+    border-radius: 8px;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.person-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.person h2 {
+    width: auto;
+    margin: 0;
+}
+
+.person .credits {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.person .credit {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid lightgrey;
+}
+
+.person .credit:hover {
+    background-color: lightgrey;
+}
+
+.person .credit-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+
+.person-image {
+
+}
+
+img {
+    background-color: lightgrey;
 }
