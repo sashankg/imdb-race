@@ -38,6 +38,10 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 tmdb.common.api_key = '80e27a5eb5a48874fc103066ef663e97';
+tmdb.common.base_uri = "https://api.themoviedb.org/3/";
+tmdb.common.images_uri = "https://image.tmdb.org/t/p/";
+
+
 
 const history = createBrowserHistory();
 
