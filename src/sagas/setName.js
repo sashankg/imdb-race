@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import 'firebase/database';
 import { takeLatest, put,  select } from 'redux-saga/effects';
 

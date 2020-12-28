@@ -6,7 +6,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/analytics';
 
 import { createBrowserHistory } from 'history'
 

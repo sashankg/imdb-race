@@ -8,7 +8,7 @@ import {
     takeEvery,
 } from 'redux-saga/effects';
 import pickName from './pickName.js';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import 'firebase/database';
 import { onFirebaseChange } from '../util.js';
 

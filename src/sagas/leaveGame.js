@@ -1,5 +1,5 @@
 import { takeEvery, select } from 'redux-saga/effects';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import 'firebase/auth';
 
 export default function* watchLeaveGame() {
@@ -7,6 +7,5 @@ export default function* watchLeaveGame() {
 }
 
 export function* leaveGame() {
-    console.log('hello');
     yield firebase.auth().currentUser.delete();
 }

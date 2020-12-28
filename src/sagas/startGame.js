@@ -1,7 +1,6 @@
-import { takeEvery, put, select, take } from 'redux-saga/effects';
-import firebase from 'firebase';
+import { takeEvery } from 'redux-saga/effects';
+import firebase from 'firebase/app';
 import 'firebase/database';
-import { gameKeySelector } from '../util.js'
 
 export default function* watchStartGame() {
     yield takeEvery('START_GAME', startGame);

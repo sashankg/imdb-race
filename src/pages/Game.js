@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import 'firebase/database';
 import Lobby from './Lobby.js';
 import Play from './Play.js';
