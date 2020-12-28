@@ -18,5 +18,7 @@ function* createGame({ history }) {
         end: 56322,
     });
 
+    game.onDisconnect().set(null);
+
     yield history.push('/game/' + game.key);
 }
